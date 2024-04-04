@@ -1,9 +1,9 @@
 import { defineField, defineType } from 'sanity'
-import { MdLocalMovies as icon } from 'react-icons/md'
+import { MdTv as icon } from 'react-icons/md'
 
 export default defineType({
-  name: 'movie',
-  title: 'Movie',
+  name: 'series',
+  title: 'Series',
   type: 'document',
   icon,
   fields: [
@@ -120,6 +120,18 @@ export default defineType({
       type: 'array',
       of: [{ type: 'genres' }],
     }),
+    defineField({
+      name: 'platform',
+      title: 'Platform',
+      type: 'array',
+      of: [{ type: 'platform' }],
+    }),
+    defineField({
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
+      of: [{ type: 'tags' }],
+    }),
     // {
     //   name: 'genres',
     //   title: 'Genres',
@@ -132,48 +144,30 @@ export default defineType({
       type: 'array',
       of: [{ type: 'origin' }],
     }),
-    defineField({
-      name: 'platform',
-      title: 'Platform',
-      type: 'array',
-      of: [{ type: 'platform' }],
-    }),
-    defineField({
-      name: 'tags',
-      title: 'Tags',
-      type: 'array',
-      of: [{ type: 'tags'}],
-    }),
-    defineField({
-      name: 'mainCollection',
-      title: 'Collection',
-      type: 'array',
-      of: [{ type: 'mainCollection'}],
-    }),
   ],
-  orderings: [
-    {
-      title: 'Release Date, New',
-      name: 'releaseDateDesc',
-      by: [
-        { field: 'releaseDate', direction: 'desc' }
-      ]
-    },
-    {
-      title: 'Release Date, Old',
-      name: 'releaseDateAsc',
-      by: [
-        { field: 'releaseDate', direction: 'asc' }
-      ]
-    },
-    {
-      title: 'Popularity',
-      name: 'popularityDesc',
-      by: [
-        { field: 'popularity', direction: 'desc' }
-      ]
-    }
-  ],
+  //   orderings: [
+  //     {
+  //       title: 'Release Date, New',
+  //       name: 'releaseDateDesc',
+  //       by: [
+  //         { field: 'releaseDate', direction: 'desc' }
+  //       ]
+  //     },
+  //     {
+  //       title: 'Release Date, Old',
+  //       name: 'releaseDateAsc',
+  //       by: [
+  //         { field: 'releaseDate', direction: 'asc' }
+  //       ]
+  //     },
+  //     {
+  //       title: 'Popularity',
+  //       name: 'popularityDesc',
+  //       by: [
+  //         { field: 'popularity', direction: 'desc' }
+  //       ]
+  //     }
+  //   ],
   preview: {
     select: {
       title: 'title',
