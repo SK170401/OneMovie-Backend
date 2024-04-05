@@ -18,12 +18,16 @@ import tags from './tags'
 import collection from './mainCollection'
 import subCollection from './sub-collection'
 import collections from './collections'
+import bollywood from './bollywood'
+import bollywoodSeries from './bollywoodSeries'
 
 export const schemaTypes = [
   // Document types
   profile,
   movie,
+  bollywood,
   series,
+  bollywoodSeries,
   person,
   screening,
   
