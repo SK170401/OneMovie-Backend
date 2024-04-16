@@ -20,14 +20,17 @@ import subCollection from './sub-collection'
 import collections from './collections'
 import bollywood from './bollywood'
 import bollywoodSeries from './bollywoodSeries'
+import languages from './languages'
+import south from './south'
 
 export const schemaTypes = [
   // Document types
   profile,
   movie,
-  bollywood,
   series,
+  bollywood,
   bollywoodSeries,
+  south,
   person,
   screening,
   
@@ -42,6 +45,7 @@ export const schemaTypes = [
   subCollection,
   download,
   episodes,
+  languages,
   status,
   genres,
   tags,

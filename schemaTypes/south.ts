@@ -2,8 +2,8 @@ import { defineField, defineType } from 'sanity'
 import { MdLocalMovies as icon } from 'react-icons/md'
 
 export default defineType({
-    name: 'bollywood',
-    title: 'Bollywood',
+    name: 'south',
+    title: 'South',
     type: 'document',
     icon,
     fields: [
@@ -85,12 +85,6 @@ export default defineType({
             type: 'number',
         }),
         defineField({
-            title: 'Has Episodes?',
-            name: 'hasepisode',
-            type: 'boolean',
-            initialValue: false
-        }),
-        defineField({
             name: 'castMembers',
             title: 'Cast Members',
             type: 'array',
@@ -101,12 +95,6 @@ export default defineType({
             title: 'Download',
             type: 'array',
             of: [{ type: 'download' }],
-        }),
-        defineField({
-            name: 'episodes',
-            title: 'Episodes',
-            type: 'array',
-            of: [{ type: 'episodes' }],
         }),
         defineField({
             name: 'status',

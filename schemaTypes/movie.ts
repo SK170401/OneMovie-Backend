@@ -150,6 +150,12 @@ export default defineType({
       type: 'array',
       of: [{ type: 'mainCollection'}],
     }),
+    defineField({
+      name: 'language',
+      title: 'Languages',
+      type: 'array',
+      of: [{ type: 'language'}],
+    }),
   ],
   orderings: [
     {

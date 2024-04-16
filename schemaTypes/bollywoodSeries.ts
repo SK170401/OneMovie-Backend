@@ -144,6 +144,12 @@ export default defineType({
       type: 'array',
       of: [{ type: 'origin' }],
     }),
+    defineField({
+      name: 'language',
+      title: 'Languages',
+      type: 'array',
+      of: [{ type: 'language'}],
+    }),
   ],
   //   orderings: [
   //     {
