@@ -74,6 +74,11 @@ export default defineType({
   type: 'object',
   fields: [
     defineField({
+      name: 'title',
+      title: 'Title', // Add the title field here
+      type: 'string'
+    }),
+    defineField({
       name: 'hd',
       title: '720P',
       type: 'array',

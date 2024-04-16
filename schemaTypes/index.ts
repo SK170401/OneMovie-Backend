@@ -22,6 +22,7 @@ import bollywood from './bollywood'
 import bollywoodSeries from './bollywoodSeries'
 import languages from './languages'
 import south from './south'
+import anime from './anime'
 
 export const schemaTypes = [
   // Document types
@@ -31,6 +32,7 @@ export const schemaTypes = [
   bollywood,
   bollywoodSeries,
   south,
+  anime,
   person,
   screening,
   

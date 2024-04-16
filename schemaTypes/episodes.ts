@@ -7,34 +7,40 @@ export default defineType({
     type: 'object',
     fields: [
         defineField({
-            name: 'hd',
-            title: '720P',
-            type: 'array',
-            of: [
-                {
-                    name: 'ep',
-                    title: 'Episode',
-                    type: 'object',
-                    fields: [
-                        defineField({
-                            name: 'number',
-                            title: 'Episode',
-                            type: 'string'
-                        }),
-                        defineField({
-                            name: 'link',
-                            title: 'Link',
-                            type: 'string'
-                        }),
-                        defineField({
-                            name: 'size',
-                            title: 'Size',
-                            type: 'string'
-                        })
-                    ]
-                },
-            ],
+            name: 'title',
+            title: 'Title', // Add the title field here
+            type: 'string'
         }),
+        defineField(
+            {
+                name: 'hd',
+                title: '720P',
+                type: 'array',
+                of: [
+                    {
+                        name: 'ep',
+                        title: 'Episode',
+                        type: 'object',
+                        fields: [
+                            defineField({
+                                name: 'number',
+                                title: 'Episode',
+                                type: 'string'
+                            }),
+                            defineField({
+                                name: 'link',
+                                title: 'Link',
+                                type: 'string'
+                            }),
+                            defineField({
+                                name: 'size',
+                                title: 'Size',
+                                type: 'string'
+                            })
+                        ]
+                    },
+                ],
+            }),
         defineField({
             name: 'fhd',
             title: '1080P',

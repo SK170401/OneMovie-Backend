@@ -2,6 +2,7 @@ import { defineType } from 'sanity'
 
 // We need will extend and import these in the custom input component later
 export const PLANS = [
+    { title: 'Anime', value: 'anime' },
     { title: 'Bollywood', value: 'bollywood' },
     { title: 'Hollywood', value: 'hollywood' },
     { title: 'South', value: 'south' },
