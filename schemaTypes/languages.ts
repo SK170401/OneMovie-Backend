@@ -9,6 +9,7 @@ export const PLANS = [
     { title: 'French', value: 'French' },
     { title: 'Spanish', value: 'Spanish' },
     { title: 'Tamil', value: 'Tamil' },
+    { title: 'Marathi', value: 'Marathi' },
     { title: 'Telugu', value: 'Telugu' },
     { title: 'Malayalam', value: 'Malayalam' },
     { title: 'Kannada', value: 'Kannada' },

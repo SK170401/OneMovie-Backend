@@ -23,6 +23,7 @@ import bollywoodSeries from './bollywoodSeries'
 import languages from './languages'
 import south from './south'
 import anime from './anime'
+import marathi from './marathi'
 
 export const schemaTypes = [
   // Document types
@@ -32,10 +33,11 @@ export const schemaTypes = [
   bollywood,
   bollywoodSeries,
   south,
+  marathi,
   anime,
   person,
   screening,
-  
+
   // Other types
   blockContent,
   plotSummary,

@@ -15,6 +15,10 @@ export const GENRES = [
         value: "animation"
     },
     {
+        title: "Biography",
+        value: "biography"
+    },
+    {
         title: "Comedy",
         value: "comedy"
     },

@@ -5,6 +5,7 @@ export const PLANS = [
     { title: 'Anime', value: 'anime' },
     { title: 'Bollywood', value: 'bollywood' },
     { title: 'Hollywood', value: 'hollywood' },
+    { title: 'Marathi', value: 'marathi' },
     { title: 'South', value: 'south' },
 ]
 
