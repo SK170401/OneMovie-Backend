@@ -142,20 +142,62 @@ export default defineType({
       name: 'tags',
       title: 'Tags',
       type: 'array',
-      of: [{ type: 'tags'}],
+      of: [{ type: 'tags' }],
     }),
-    defineField({
-      name: 'mainCollection',
-      title: 'Collection',
+    {
+      name: 'collections',
+      title: 'Collections',
       type: 'array',
-      of: [{ type: 'mainCollection'}],
-    }),
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'name',
+              title: 'Name',
+              type: 'string',
+              validation: Rule => Rule.required()
+            },
+            {
+              name: 'subCollections',
+              title: 'Sub-Collections',
+              type: 'array',
+              of: [
+                {
+                  type: 'object',
+                  fields: [
+                    {
+                      name: 'name',
+                      title: 'Name',
+                      type: 'string',
+                      validation: Rule => Rule.required()
+                    },
+                    {
+                      name: 'movies',
+                      title: 'Movies',
+                      type: 'array',
+                      of: [{ type: 'reference', to: { type: 'movie' } }]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     defineField({
       name: 'language',
       title: 'Languages',
       type: 'array',
-      of: [{ type: 'language'}],
+      of: [{ type: 'language' }],
     }),
+    {
+      name: 'comments',
+      title: 'Comments',
+      type: 'array',
+      of: [{ type: 'comment' }]
+    }
   ],
   orderings: [
     {

@@ -27,6 +27,11 @@ export default defineType({
             options: {
                 hotspot: true,
             },
+            // of: [{
+            //     type: "image", options: {
+            //         hotspot: true,
+            //     },
+            // }]
         }),
     ],
     preview: {

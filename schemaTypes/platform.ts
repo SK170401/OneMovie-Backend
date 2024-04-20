@@ -5,6 +5,7 @@ export const PLANS = [
     { title: 'Amazon Prime', value: 'Amazon Prime' },
     { title: 'Disney+ Hotstar', value: 'Disney+ Hotstar' },
     { title: 'Netflix', value: 'Netflix' },
+    { title: 'ZEE5', value: 'ZEE5' },
 ]
 
 export default defineType({

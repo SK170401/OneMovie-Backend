@@ -144,12 +144,12 @@ export default defineType({
             type: 'array',
             of: [{ type: 'tags' }],
         }),
-        defineField({
-            name: 'mainCollection',
+        {
+            name: 'collection',
             title: 'Collection',
-            type: 'array',
-            of: [{ type: 'mainCollection' }],
-        }),
+            type: 'reference',
+            to: { type: 'movieCollection' }
+          },
         defineField({
             name: 'language',
             title: 'Languages',

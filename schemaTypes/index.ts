@@ -17,13 +17,14 @@ import platform from './platform'
 import tags from './tags'
 import collection from './mainCollection'
 import subCollection from './sub-collection'
-import collections from './collections'
+// import collections from './collections'
 import bollywood from './bollywood'
 import bollywoodSeries from './bollywoodSeries'
 import languages from './languages'
 import south from './south'
 import anime from './anime'
 import marathi from './marathi'
+import comments from './comments'
 
 export const schemaTypes = [
   // Document types
@@ -45,7 +46,8 @@ export const schemaTypes = [
   castMember,
   crewMember,
   collection,
-  collections,
+  comments,
+  // colle  ctions,
   subCollection,
   download,
   episodes,
