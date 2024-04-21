@@ -18,6 +18,11 @@ export default {
             name: 'message',
             title: 'Message',
             type: 'text'
-        }
+        },
+        {
+            name: 'date',
+            title: 'Date',
+            type: 'datetime', // Define a date field using the 'datetime' type
+        },
     ]
 }
