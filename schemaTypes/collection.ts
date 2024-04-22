@@ -1,8 +1,8 @@
-// subCollection.js
+// collection.js
 
 export default {
-    name: 'subCollection',
-    title: 'Sub Collection',
+    name: 'collection',
+    title: 'Collection',
     type: 'document',
     fields: [
         {
@@ -17,6 +17,12 @@ export default {
             of: [{ type: 'origin' }],
         },
         {
+            name: 'movies',
+            title: 'Movies',
+            type: 'array',
+            of: [{ type: 'reference', to: { type: 'movie' } }]
+        },
+        {
             name: 'poster',
             type: 'image',
             options: {
@@ -24,10 +30,10 @@ export default {
             }
         },
         {
-            name: 'movies',
-            title: 'Movies',
+            name: 'subCollection',
+            title: 'Sub Collection',
             type: 'array',
-            of: [{ type: 'reference', to: { type: 'movie' } }]
+            of: [{ type: 'reference', to: { type: 'subCollection' } }]
         }
     ]
 }

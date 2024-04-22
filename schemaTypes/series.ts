@@ -75,22 +75,6 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'externalId',
-      title: 'External ID',
-      type: 'number',
-    }),
-    defineField({
-      name: 'popularity',
-      title: 'Popularity',
-      type: 'number',
-    }),
-    defineField({
-      title: 'Has Episodes?',
-      name: 'hasepisode',
-      type: 'boolean',
-      initialValue: false
-    }),
-    defineField({
       name: 'castMembers',
       title: 'Cast Members',
       type: 'array',
@@ -132,12 +116,6 @@ export default defineType({
       type: 'array',
       of: [{ type: 'tags' }],
     }),
-    // {
-    //   name: 'genres',
-    //   title: 'Genres',
-    //   type: 'array',
-    //   of: [{ type: 'reference', to: [{ type: 'genres' }] }],
-    // },
     defineField({
       name: 'origin',
       title: 'Origin',
@@ -148,41 +126,15 @@ export default defineType({
       name: 'language',
       title: 'Languages',
       type: 'array',
-      of: [{ type: 'language'}],
+      of: [{ type: 'language' }],
     }),
   ],
-  //   orderings: [
-  //     {
-  //       title: 'Release Date, New',
-  //       name: 'releaseDateDesc',
-  //       by: [
-  //         { field: 'releaseDate', direction: 'desc' }
-  //       ]
-  //     },
-  //     {
-  //       title: 'Release Date, Old',
-  //       name: 'releaseDateAsc',
-  //       by: [
-  //         { field: 'releaseDate', direction: 'asc' }
-  //       ]
-  //     },
-  //     {
-  //       title: 'Popularity',
-  //       name: 'popularityDesc',
-  //       by: [
-  //         { field: 'popularity', direction: 'desc' }
-  //       ]
-  //     }
-  //   ],
   preview: {
     select: {
       title: 'title',
       date: 'releaseDate',
       media: 'poster',
       subtitle: 'status',
-
-      // download: 'download.title',
-      // episodes: 'episodes.title',
     },
     prepare(selection) {
       const year = selection.date && selection.date.split('-')[0]

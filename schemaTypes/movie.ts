@@ -75,22 +75,6 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'externalId',
-      title: 'External ID',
-      type: 'number',
-    }),
-    defineField({
-      name: 'popularity',
-      title: 'Popularity',
-      type: 'number',
-    }),
-    defineField({
-      title: 'Has Episodes?',
-      name: 'hasepisode',
-      type: 'boolean',
-      initialValue: false
-    }),
-    defineField({
       name: 'castMembers',
       title: 'Cast Members',
       type: 'array',
@@ -101,12 +85,6 @@ export default defineType({
       title: 'Download',
       type: 'array',
       of: [{ type: 'download' }],
-    }),
-    defineField({
-      name: 'episodes',
-      title: 'Episodes',
-      type: 'array',
-      of: [{ type: 'episodes' }],
     }),
     defineField({
       name: 'status',
@@ -144,60 +122,18 @@ export default defineType({
       type: 'array',
       of: [{ type: 'tags' }],
     }),
-    {
-      name: 'collections',
-      title: 'Collections',
-      type: 'array',
-      of: [
-        {
-          type: 'object',
-          fields: [
-            {
-              name: 'name',
-              title: 'Name',
-              type: 'string',
-              validation: Rule => Rule.required()
-            },
-            {
-              name: 'subCollections',
-              title: 'Sub-Collections',
-              type: 'array',
-              of: [
-                {
-                  type: 'object',
-                  fields: [
-                    {
-                      name: 'name',
-                      title: 'Name',
-                      type: 'string',
-                      validation: Rule => Rule.required()
-                    },
-                    {
-                      name: 'movies',
-                      title: 'Movies',
-                      type: 'array',
-                      of: [{ type: 'reference', to: { type: 'movie' } }]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
     defineField({
       name: 'language',
       title: 'Languages',
       type: 'array',
       of: [{ type: 'language' }],
     }),
-    {
+    defineField({
       name: 'comments',
       title: 'Comments',
       type: 'array',
       of: [{ type: 'comment' }]
-    }
+    })
   ],
   orderings: [
     {

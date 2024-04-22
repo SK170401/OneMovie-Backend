@@ -98,12 +98,6 @@ export default defineType({
             type: 'array',
             of: [{ type: 'genres' }],
         }),
-        // {
-        //   name: 'genres',
-        //   title: 'Genres',
-        //   type: 'array',
-        //   of: [{ type: 'reference', to: [{ type: 'genres' }] }],
-        // },
         defineField({
             name: 'origin',
             title: 'Origin',
@@ -122,18 +116,18 @@ export default defineType({
             type: 'array',
             of: [{ type: 'tags' }],
         }),
-        {
-            name: 'collection',
-            title: 'Collection',
-            type: 'reference',
-            to: { type: 'movieCollection' }
-          },
+        defineField({
+            name: 'comments',
+            title: 'Comments',
+            type: 'array',
+            of: [{ type: 'comment' }]
+        }),
         defineField({
             name: 'language',
             title: 'Languages',
             type: 'array',
-            of: [{ type: 'language'}],
-          }),
+            of: [{ type: 'language' }],
+        }),
     ],
     orderings: [
         {

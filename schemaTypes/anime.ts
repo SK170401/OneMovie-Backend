@@ -86,7 +86,7 @@ export default defineType({
             title: 'Episodes',
             type: 'array',
             of: [{ type: 'episodes' }],
-          }),
+        }),
         defineField({
             name: 'status',
             title: 'Status',
@@ -123,12 +123,18 @@ export default defineType({
             type: 'array',
             of: [{ type: 'tags' }],
         }),
-        {
+        defineField({
             name: 'collection',
             title: 'Collection',
-            type: 'reference',
-            to: { type: 'movieCollection' }
-          },
+            type: 'array',
+            of: [{ type: 'collection' }],
+        }),
+        defineField({
+            name: 'comments',
+            title: 'Comments',
+            type: 'array',
+            of: [{ type: 'comment' }]
+        }),
         defineField({
             name: 'language',
             title: 'Languages',

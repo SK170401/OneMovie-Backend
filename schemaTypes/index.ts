@@ -15,9 +15,8 @@ import origin from './origin'
 import series from './series'
 import platform from './platform'
 import tags from './tags'
-import collection from './mainCollection'
+import collection from './collection'
 import subCollection from './sub-collection'
-// import collections from './collections'
 import bollywood from './bollywood'
 import bollywoodSeries from './bollywoodSeries'
 import languages from './languages'
@@ -46,9 +45,9 @@ export const schemaTypes = [
   castMember,
   crewMember,
   collection,
+  subCollection,
   comments,
   // colle  ctions,
-  subCollection,
   download,
   episodes,
   languages,

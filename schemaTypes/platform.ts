@@ -4,6 +4,7 @@ import { defineType } from 'sanity'
 export const PLANS = [
     { title: 'Amazon Prime', value: 'Amazon Prime' },
     { title: 'Disney+ Hotstar', value: 'Disney+ Hotstar' },
+    { title: 'JioCinema', value: 'JioCinema' },
     { title: 'Netflix', value: 'Netflix' },
     { title: 'ZEE5', value: 'ZEE5' },
 ]

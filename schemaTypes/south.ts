@@ -75,16 +75,6 @@ export default defineType({
             type: 'string',
         }),
         defineField({
-            name: 'externalId',
-            title: 'External ID',
-            type: 'number',
-        }),
-        defineField({
-            name: 'popularity',
-            title: 'Popularity',
-            type: 'number',
-        }),
-        defineField({
             name: 'castMembers',
             title: 'Cast Members',
             type: 'array',
@@ -108,12 +98,6 @@ export default defineType({
             type: 'array',
             of: [{ type: 'genres' }],
         }),
-        // {
-        //   name: 'genres',
-        //   title: 'Genres',
-        //   type: 'array',
-        //   of: [{ type: 'reference', to: [{ type: 'genres' }] }],
-        // },
         defineField({
             name: 'origin',
             title: 'Origin',
@@ -132,18 +116,18 @@ export default defineType({
             type: 'array',
             of: [{ type: 'tags' }],
         }),
-        {
-            name: 'collection',
-            title: 'Collection',
-            type: 'reference',
-            to: { type: 'movieCollection' }
-          },
+        defineField({
+            name: 'comments',
+            title: 'Comments',
+            type: 'array',
+            of: [{ type: 'comment' }]
+        }),
         defineField({
             name: 'language',
             title: 'Languages',
             type: 'array',
-            of: [{ type: 'language'}],
-          }),
+            of: [{ type: 'language' }],
+        }),
     ],
     orderings: [
         {
@@ -174,9 +158,6 @@ export default defineType({
             date: 'releaseDate',
             media: 'poster',
             subtitle: 'status',
-
-            // download: 'download.title',
-            // episodes: 'episodes.title',
         },
         prepare(selection) {
             const year = selection.date && selection.date.split('-')[0]
