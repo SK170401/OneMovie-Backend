@@ -48,6 +48,14 @@ export default defineType({
         hotspot: true,
       },
     }),
+    defineField({
+      name: 'cover',
+      title: 'Cover Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
     defineField(
       {
         name: 'gallery',
